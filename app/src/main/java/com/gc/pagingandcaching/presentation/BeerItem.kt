@@ -1,5 +1,6 @@
 package com.gc.pagingandcaching.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -32,7 +33,7 @@ fun BeerItem(
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier, elevation = 4.dp
+        modifier = modifier, elevation = 4.dp, backgroundColor = Color.White
     ) {
         Row(
             modifier = Modifier
@@ -57,7 +58,8 @@ fun BeerItem(
                 Text(
                     text = beer.name,
                     style = MaterialTheme.typography.h6,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    color = Color.Black
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 beer.tagline?.let {
@@ -70,14 +72,16 @@ fun BeerItem(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = beer.description,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    color = Color.Black
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "First brewed in ${beer.firstBrewed}",
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.End,
-                    fontSize = 8.sp
+                    fontSize = 8.sp,
+                    color = Color.Black
                 )
 
 
